@@ -31,3 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
+!/src/main/java/com/aeert/demo/controller/lucene/LuceneController.java

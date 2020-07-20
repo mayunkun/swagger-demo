@@ -55,11 +55,11 @@ public class SwaggerConfig {
     }
 
     @Bean
-    public Docket testApi() {
-        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).groupName("测试服务")
-                .apiInfo(new ApiInfoBuilder().title("测试服务API").description("测试服务接口文档").build()).pathMapping("/")
+    public Docket luceneApi() {
+        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).groupName("lucene服务")
+                .apiInfo(new ApiInfoBuilder().title("lucene服务API").description("lucene服务接口文档").build()).pathMapping("/")
                 .enable(true).select()
-                .apis(RequestHandlerSelectors.basePackage("com.aeert.demo.controller.test"))
+                .apis(RequestHandlerSelectors.basePackage("com.aeert.demo.controller.lucene"))
                 .paths(PathSelectors.any()).build()
                 .globalOperationParameters(pars)
                 .securitySchemes(security());
